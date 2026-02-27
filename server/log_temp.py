@@ -25,7 +25,7 @@ def write_log(log_data):
 def log_temperature():
     data = request.get_json(force=True) or {}
     
-    for k in ("server", "temperature", "updated_at"):
+    for k in ("server", "sensors", "updated_at"):
         if k not in data:
             return jsonify({"error": f"Missing field!! {k}"}), 400
 
@@ -33,13 +33,13 @@ def log_temperature():
 
     for item in log_data:
         if item.get('server') == data['server']:
-            item['temperature'] = data['temperature']
+            item['sensors'] = data['sensors']
             item['updated_at'] = data['updated_at']
             break
     else:
         log_data.append({
             'server': data['server'],
-            'temperature': data['temperature'],
+            'sensors': data['sensors'],
             'updated_at': data['updated_at']
         })
 

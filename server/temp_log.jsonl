@@ -1,2 +1,1 @@
-{"server": "192.168.0.100", "temperature": 35.5, "updated_at": "2026-02-17 10:00:00"}
-
+{"server": "jhilke", "sensors": [{"sensor": "acpitz", "description": "27.8 \u00b0C"}, {"sensor": "acpitz", "description": "29.8 \u00b0C"}, {"sensor": "x86_pkg_temp", "description": "43 \u00b0C"}], "updated_at": "2026-02-24_09-40-01"}
